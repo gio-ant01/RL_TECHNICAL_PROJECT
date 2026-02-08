@@ -1,0 +1,4 @@
+source;share/escape_room/local_setup.bash
+source;share/escape_room/local_setup.dsv
+source;share/escape_room/local_setup.sh
+source;share/escape_room/local_setup.zsh

@@ -1,0 +1,772 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="keypad">
+    <static>true</static>
+
+    <link name="panel">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.004</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.002</iyy>
+          <iyz>0</iyz>
+          <izz>0.004</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.225 0.025 0.375</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="panel_visual">
+        <geometry>
+          <box>
+            <size>0.225 0.025 0.375</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.18 1</ambient>
+          <diffuse>0.15 0.15 0.25 1</diffuse>
+          <specular>0.4 0.4 0.4 1</specular>
+        </material>
+      </visual>
+
+      <!-- Button geometry -->
+      <visual name="button_1">
+        <pose>0.08 0.02 0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="button_2">
+        <pose>0.0 0.02 0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="button_3">
+        <pose>-0.08 0.02 0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="button_4">
+        <pose>0.08 0.02 0.04 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="button_5">
+        <pose>0.0 0.02 0.04 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="button_6">
+        <pose>-0.08 0.02 0.04 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="button_7">
+        <pose>0.08 0.02 -0.04 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="button_8">
+        <pose>0.0 0.02 -0.04 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="button_9">
+        <pose>-0.08 0.02 -0.04 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="button_0">
+        <pose>0.0 0.02 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.01 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.82 0.82 0.82 1</ambient>
+          <diffuse>0.93 0.93 0.93 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+
+      <!-- 7-segment style number overlays -->
+      <!-- button 1 -->
+      <visual name="button_1_seg_b">
+        <pose>0.0625 0.026 0.1275 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_1_seg_c">
+        <pose>0.0625 0.026 0.1125 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <!-- button 2 -->
+      <visual name="button_2_seg_a">
+        <pose>0 0.026 0.1375 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_2_seg_b">
+        <pose>-0.0175 0.026 0.1275 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_2_seg_g">
+        <pose>0 0.026 0.12 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_2_seg_e">
+        <pose>0.0175 0.026 0.1125 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_2_seg_d">
+        <pose>0 0.026 0.1025 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <!-- button 3 -->
+      <visual name="button_3_seg_a">
+        <pose>-0.08 0.026 0.1375 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_3_seg_b">
+        <pose>-0.0975 0.026 0.1275 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_3_seg_g">
+        <pose>-0.08 0.026 0.12 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_3_seg_c">
+        <pose>-0.0975 0.026 0.1125 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_3_seg_d">
+        <pose>-0.08 0.026 0.1025 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <!-- button 4 -->
+      <visual name="button_4_seg_f">
+        <pose>0.0975 0.026 0.0475 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_4_seg_g">
+        <pose>0.08 0.026 0.04 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_4_seg_b">
+        <pose>0.0625 0.026 0.0475 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_4_seg_c">
+        <pose>0.0625 0.026 0.0325 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <!-- button 5 -->
+      <visual name="button_5_seg_a">
+        <pose>0 0.026 0.0575 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_5_seg_f">
+        <pose>0.0175 0.026 0.0475 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_5_seg_g">
+        <pose>0 0.026 0.04 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_5_seg_c">
+        <pose>-0.0175 0.026 0.0325 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_5_seg_d">
+        <pose>0 0.026 0.0225 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <!-- button 6 -->
+      <visual name="button_6_seg_a">
+        <pose>-0.08 0.026 0.0575 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_6_seg_f">
+        <pose>-0.0625 0.026 0.0475 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_6_seg_g">
+        <pose>-0.08 0.026 0.04 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_6_seg_e">
+        <pose>-0.0625 0.026 0.0325 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_6_seg_c">
+        <pose>-0.0975 0.026 0.0325 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_6_seg_d">
+        <pose>-0.08 0.026 0.0225 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <!-- button 7 -->
+      <visual name="button_7_seg_a">
+        <pose>0.08 0.026 -0.0225 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_7_seg_b">
+        <pose>0.0625 0.026 -0.0325 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_7_seg_c">
+        <pose>0.0625 0.026 -0.0475 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <!-- button 8 -->
+      <visual name="button_8_seg_a">
+        <pose>0 0.026 -0.0225 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_8_seg_b">
+        <pose>-0.0175 0.026 -0.0325 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_8_seg_c">
+        <pose>-0.0175 0.026 -0.0475 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_8_seg_d">
+        <pose>0 0.026 -0.0575 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_8_seg_e">
+        <pose>0.0175 0.026 -0.0475 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_8_seg_f">
+        <pose>0.0175 0.026 -0.0325 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_8_seg_g">
+        <pose>0 0.026 -0.04 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <!-- button 9 -->
+      <visual name="button_9_seg_a">
+        <pose>-0.08 0.026 -0.0225 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_9_seg_b">
+        <pose>-0.0975 0.026 -0.0325 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_9_seg_c">
+        <pose>-0.0975 0.026 -0.0475 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_9_seg_d">
+        <pose>-0.08 0.026 -0.0575 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_9_seg_f">
+        <pose>-0.0625 0.026 -0.0325 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_9_seg_g">
+        <pose>-0.08 0.026 -0.04 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <!-- button 0 -->
+      <visual name="button_0_seg_a">
+        <pose>0 0.026 -0.1025 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_0_seg_b">
+        <pose>-0.0175 0.026 -0.1125 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_0_seg_c">
+        <pose>-0.0175 0.026 -0.1275 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_0_seg_d">
+        <pose>0 0.026 -0.1375 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.002 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_0_seg_e">
+        <pose>0.0175 0.026 -0.1275 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="button_0_seg_f">
+        <pose>0.0175 0.026 -0.1125 0 0 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.006 0.002 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

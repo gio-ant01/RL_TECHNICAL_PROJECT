@@ -1,0 +1,3 @@
+gmake[2]: *** [CMakeFiles/dynamic_tf_publisher.dir/build.make:76: CMakeFiles/dynamic_tf_publisher.dir/src/odom_bl_tf.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dynamic_tf_publisher.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

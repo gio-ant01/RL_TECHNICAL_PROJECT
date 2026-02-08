@@ -1,0 +1,107 @@
+[0.000000] (-) TimerEvent: {}
+[0.000259] (escape_room) JobQueued: {'identifier': 'escape_room', 'dependencies': OrderedDict()}
+[0.000815] (escape_room) JobStarted: {'identifier': 'escape_room'}
+[0.012796] (escape_room) JobProgress: {'identifier': 'escape_room', 'progress': 'cmake'}
+[0.013254] (escape_room) Command: {'cmd': ['/usr/bin/cmake', '/home/user/ros2_ws/src/escape_room', '-DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/src/escape_room/install/escape_room'], 'cwd': '/home/user/ros2_ws/src/escape_room/build/escape_room', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', '/home/user/ros2_ws/src/ros2_iiwa/iiwa_description/gazebo/models'), ('HOSTNAME', 'GAPCu'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/user/ros2_ws/install/multirobot_map_merge/lib:/home/user/ros2_ws/install/aruco_ros/lib:/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/user'), ('OLDPWD', '/home/user/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('GAZEBO_AUDIO', '0'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/user/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/user/ros2_ws/install/multirobot_map_merge:/home/user/ros2_ws/install/explore_lite:/home/user/ros2_ws/install/escape_room:/home/user/ros2_ws/install/aruco_ros:/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('PWD', '/home/user/ros2_ws/src/escape_room/build/escape_room'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/user/ros2_ws/install/multirobot_map_merge:/home/user/ros2_ws/install/explore_lite:/home/user/ros2_ws/install/escape_room:/home/user/ros2_ws/install/aruco_ros:/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/opt/ros/humble')]), 'shell': False}
+[0.080548] (escape_room) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099818] (-) TimerEvent: {}
+[0.139334] (escape_room) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.146034] (escape_room) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200322] (-) TimerEvent: {}
+[0.259931] (escape_room) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.280022] (escape_room) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.280408] (escape_room) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.281039] (escape_room) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.286260] (escape_room) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.300451] (-) TimerEvent: {}
+[0.400796] (-) TimerEvent: {}
+[0.456942] (escape_room) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.466113] (escape_room) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.468400] (escape_room) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.468641] (escape_room) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.479728] (escape_room) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.500908] (-) TimerEvent: {}
+[0.601196] (-) TimerEvent: {}
+[0.685872] (escape_room) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.701307] (-) TimerEvent: {}
+[0.801645] (-) TimerEvent: {}
+[0.845565] (escape_room) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.901754] (-) TimerEvent: {}
+[0.923430] (escape_room) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.937541] (escape_room) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.954722] (escape_room) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.979435] (escape_room) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.001855] (-) TimerEvent: {}
+[1.013666] (escape_room) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.051793] (escape_room) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[1.068127] (escape_room) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.083575] (escape_room) StdoutLine: {'line': b'-- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.101966] (-) TimerEvent: {}
+[1.125615] (escape_room) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.130552] (escape_room) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.202063] (-) TimerEvent: {}
+[1.281727] (escape_room) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.302192] (-) TimerEvent: {}
+[1.317700] (escape_room) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.365979] (escape_room) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.402319] (-) TimerEvent: {}
+[1.451597] (escape_room) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.502466] (-) TimerEvent: {}
+[1.523826] (escape_room) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.524076] (escape_room) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.602622] (-) TimerEvent: {}
+[1.622941] (escape_room) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.624328] (escape_room) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.657781] (escape_room) StdoutLine: {'line': b'-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)\n'}
+[1.692449] (escape_room) StdoutLine: {'line': b'-- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)\n'}
+[1.695343] (escape_room) StdoutLine: {'line': b'-- Found tf2: 0.25.18 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.699454] (escape_room) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.18 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[1.702680] (-) TimerEvent: {}
+[1.802991] (-) TimerEvent: {}
+[1.815897] (escape_room) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.823394] (escape_room) StdoutLine: {'line': b'-- Generating done\n'}
+[1.826235] (escape_room) StdoutLine: {'line': b'-- Build files have been written to: /home/user/ros2_ws/src/escape_room/build/escape_room\n'}
+[1.833676] (escape_room) CommandEnded: {'returncode': 0}
+[1.834380] (escape_room) JobProgress: {'identifier': 'escape_room', 'progress': 'build'}
+[1.836113] (escape_room) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/user/ros2_ws/src/escape_room/build/escape_room', '--', '-j12', '-l12'], 'cwd': '/home/user/ros2_ws/src/escape_room/build/escape_room', 'env': OrderedDict([('GZ_SIM_RESOURCE_PATH', '/home/user/ros2_ws/src/ros2_iiwa/iiwa_description/gazebo/models'), ('HOSTNAME', 'GAPCu'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/user/ros2_ws/install/multirobot_map_merge/lib:/home/user/ros2_ws/install/aruco_ros/lib:/home/user/ros2_ws/install/aruco_msgs/lib:/home/user/ros2_ws/install/aruco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/user'), ('OLDPWD', '/home/user/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('GAZEBO_AUDIO', '0'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/user/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/user/ros2_ws/install/multirobot_map_merge:/home/user/ros2_ws/install/explore_lite:/home/user/ros2_ws/install/escape_room:/home/user/ros2_ws/install/aruco_ros:/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('PWD', '/home/user/ros2_ws/src/escape_room/build/escape_room'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/user/ros2_ws/install/aruco_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/user/ros2_ws/install/multirobot_map_merge:/home/user/ros2_ws/install/explore_lite:/home/user/ros2_ws/install/escape_room:/home/user/ros2_ws/install/aruco_ros:/home/user/ros2_ws/install/aruco_msgs:/home/user/ros2_ws/install/aruco:/opt/ros/humble')]), 'shell': False}
+[1.887546] (escape_room) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/dynamic_tf_publisher.dir/src/odom_bl_tf.cpp.o\x1b[0m\n'}
+[1.903224] (-) TimerEvent: {}
+[2.003760] (-) TimerEvent: {}
+[2.104119] (-) TimerEvent: {}
+[2.204499] (-) TimerEvent: {}
+[2.304855] (-) TimerEvent: {}
+[2.405214] (-) TimerEvent: {}
+[2.505566] (-) TimerEvent: {}
+[2.605919] (-) TimerEvent: {}
+[2.706285] (-) TimerEvent: {}
+[2.806653] (-) TimerEvent: {}
+[2.907008] (-) TimerEvent: {}
+[3.007371] (-) TimerEvent: {}
+[3.107645] (-) TimerEvent: {}
+[3.207996] (-) TimerEvent: {}
+[3.308366] (-) TimerEvent: {}
+[3.408724] (-) TimerEvent: {}
+[3.509068] (-) TimerEvent: {}
+[3.609445] (-) TimerEvent: {}
+[3.709727] (-) TimerEvent: {}
+[3.809991] (-) TimerEvent: {}
+[3.910309] (-) TimerEvent: {}
+[4.010564] (-) TimerEvent: {}
+[4.110930] (-) TimerEvent: {}
+[4.211272] (-) TimerEvent: {}
+[4.311539] (-) TimerEvent: {}
+[4.411886] (-) TimerEvent: {}
+[4.512239] (-) TimerEvent: {}
+[4.612597] (-) TimerEvent: {}
+[4.712958] (-) TimerEvent: {}
+[4.813323] (-) TimerEvent: {}
+[4.913730] (-) TimerEvent: {}
+[5.014089] (-) TimerEvent: {}
+[5.114375] (-) TimerEvent: {}
+[5.198273] (escape_room) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/dynamic_tf_publisher.dir/build.make:76: CMakeFiles/dynamic_tf_publisher.dir/src/odom_bl_tf.cpp.o] Interrupt\n'}
+[5.198516] (escape_room) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dynamic_tf_publisher.dir/all] Interrupt\n'}
+[5.198638] (escape_room) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Interrupt\n'}
+[5.214548] (-) TimerEvent: {}
+[5.228719] (escape_room) CommandEnded: {'returncode': -2}
+[5.236576] (escape_room) JobEnded: {'identifier': 'escape_room', 'rc': 'SIGINT'}
+[5.247276] (-) EventReactorShutdown: {}

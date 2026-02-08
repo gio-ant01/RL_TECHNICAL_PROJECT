@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="escape_room">
+
+    <!-- Basic physics and lighting -->
+    <physics name='default_physics' default='0' type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+    </physics>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- Ground plane -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>50 50</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>50 50</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.3 0.3 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Corridor floors -->
+    <include>
+      <uri>model://corridor_floor_bottom</uri>
+      <name>floor_bottom</name>
+      <pose>0.75 0 0.005 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://corridor_floor_vertical</uri>
+      <name>floor_vertical</name>
+      <pose>0 1.5 0.005 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://corridor_floor_top</uri>
+      <name>floor_top</name>
+      <pose>-0.75 3 0.005 0 0 0</pose>
+    </include>
+
+    <!-- Corridor walls -->
+    <include>
+      <uri>model://corridor_wall_bottom_south</uri>
+      <name>wall_bottom_south</name>
+      <pose>0.75 -0.55 0.625 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://corridor_wall_bottom_north</uri>
+      <name>wall_bottom_north</name>
+      <pose>1.25 0.55 0.625 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://corridor_wall_vertical_east</uri>
+      <name>wall_vertical_east</name>
+      <pose>0.55 2 0.625 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://corridor_wall_vertical_west</uri>
+      <name>wall_vertical_west</name>
+      <pose>-0.55 0.95 0.625 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://corridor_wall_top_south</uri>
+      <name>wall_top_south</name>
+      <pose>-1.25 2.45 0.625 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://corridor_wall_top_north</uri>
+      <name>wall_top_north</name>
+      <pose>-0.7 3.55 0.625 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://corridor_wall_top_west</uri>
+      <name>wall_top_west</name>
+      <pose>-2 3 0.625 0 0 0</pose>
+    </include>
+
+    <!-- Sliding exit door at the corridor end -->
+    <include>
+      <uri>model://exit_door</uri>
+      <name>exit_door_main</name>
+      <pose>2.1 0 0 0 0 1.5708</pose>
+      <scale>0.5 0.5 0.5</scale>
+    </include>
+
+    <!-- Corridor obstacles -->
+    <include>
+      <uri>model://box_obstacle</uri>
+      <name>obstacle_bottom_east</name>
+      <pose>1.75 0.2 0.125 0 0 0.35</pose>
+      <scale>1.4 0.8 1.1</scale>
+    </include>
+
+    <include>
+      <uri>model://box_obstacle</uri>
+      <name>obstacle_bottom_west</name>
+      <pose>0.0 -0.2 0.125 0 0 -0.25</pose>
+      <scale>0.8 1.2 0.9</scale>
+    </include>
+
+    <include>
+      <uri>model://box_obstacle</uri>
+      <name>obstacle_corner</name>
+      <pose>-0.3 1.0 0.125 0 0 0.6</pose>
+      <scale>1.1 1.0 1.0</scale>
+    </include>
+
+    <include>
+      <uri>model://box_obstacle</uri>
+      <name>obstacle_vertical_north</name>
+      <pose>0.2 2.25 0.125 0 0 -0.4</pose>
+      <scale>0.9 1.3 1.2</scale>
+    </include>
+
+    <include>
+      <uri>model://box_obstacle</uri>
+      <name>obstacle_top</name>
+      <pose>-1.05 2.80 0.125 0 0 0.2</pose>
+      <scale>1.3 0.9 1.0</scale>
+    </include>
+
+    <!-- Keypad mounted on the north wall near the exit -->
+    <include>
+      <uri>model://keypad</uri>
+      <name>keypad_panel</name>
+      <pose>1.85 0.625 0.55 0 0 0</pose>
+      <scale>0.5 0.5 0.5</scale>
+    </include>
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+
+  </world>
+</sdf>
