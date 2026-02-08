@@ -37,7 +37,7 @@ This project implements an escape room scenario where two robots cooperate to na
 
 ```bash
 cd ~/ros2_ws/src
-git clone https://github.com/YOUR_USERNAME/escape_room_pkg.git
+git clone https://github.com/gio-ant01/escape_room_pkg.git
 ```
 
 ### Install Required Packages
@@ -92,17 +92,17 @@ This launches the entire escape room scenario with all components.
 
 **Terminal 1** - Launch Gazebo world with fra2mo:
 ```bash
-ros2 launch escape_room_pkg fra2mo_escape_room.launch.py
+ros2 launch escape_room gazebo_fra2mo.launch.py
 ```
 
 **Terminal 2** - Spawn armando manipulator:
 ```bash
-ros2 launch escape_room_pkg spawn_armando.launch.py
+ros2 launch escape_room spawn_armando.launch.py
 ```
 
 **Terminal 3** - Start complete mission (navigation + ArUco detection + PIN entry):
 ```bash
-ros2 launch escape_room_pkg simulation.launch.py
+ros2 launch escape_room simulation.launch.py
 ```
 
 The robot will:
@@ -120,7 +120,7 @@ The robot will:
 ### **1. Test the Gazebo World Only**
 
 ```bash
-ros2 launch escape_room_pkg gazebo_escape_room.launch.py
+ros2 launch escape_room gazebo_escape_room.launch.py
 ```
 
 This launches only the corridor environment with obstacles and the exit door.
@@ -131,15 +131,17 @@ This launches only the corridor environment with obstacles and the exit door.
 
 **Terminal 1** - Launch simulation:
 ```bash
-ros2 launch escape_room_pkg fra2mo_escape_room.launch.py
+ros2 launch escape_room fra2mo_escape_room.launch.py
 ```
 
-**Terminal 2** - Open/close door manually:
+**Terminal 2** - Activate the controller:
 ```bash
 # Open door
-ros2 run escape_room_pkg door_controller.py
+ros2 run escape_room door_controller.py
 
-# Or publish directly
+**Terminal 3** - Open/close door manually:
+```bash
+# Open door directly
 ros2 topic pub /door_slide/cmd_pos std_msgs/msg/Float64 "{data: 0.9}" --once
 ```
 
@@ -151,12 +153,12 @@ Test armando's ability to press keypad buttons.
 
 **Terminal 1** - Launch world + fra2mo:
 ```bash
-ros2 launch escape_room_pkg fra2mo_escape_room.launch.py
+ros2 launch escape_room gazebo_fra2mo.launch.py
 ```
 
 **Terminal 2** - Spawn armando:
 ```bash
-ros2 launch escape_room_pkg spawn_armando.launch.py
+ros2 launch escape_room spawn_armando.launch.py
 ```
 
 **Terminal 3** - Start keypad controller:
@@ -205,19 +207,19 @@ Create a new map of the corridor environment.
 
 **Terminal 1** - Launch simulation:
 ```bash
-ros2 launch escape_room_pkg fra2mo_escape_room.launch.py
+ros2 launch escape_room gazebo_fra2mo.launch.py
 ```
 
 **Terminal 2** - Start exploration:
 ```bash
-ros2 launch escape_room_pkg fra2mo_explore.launch.py
+ros2 launch escape_room fra2mo_explore.launch.py
 ```
 
 fra2mo will autonomously explore the corridor and build the map.
 
 **Terminal 3** - Save the map (while exploration is running):
 ```bash
-cd ~/ros2_ws/src/escape_room_pkg
+cd ~/ros2_ws/src/escape_room
 ros2 run nav2_map_server map_saver_cli -f maps/escape_room_map
 ```
 
@@ -229,12 +231,12 @@ This saves `escape_room_map.pgm` and `escape_room_map.yaml` in the `maps/` folde
 
 **Terminal 1** - Launch simulation:
 ```bash
-ros2 launch escape_room_pkg fra2mo_escape_room.launch.py
+ros2 launch escape_room gazebo_fra2mo.launch.py
 ```
 
 **Terminal 2** - Launch navigation with saved map:
 ```bash
-ros2 launch escape_room_pkg fra2mo_navigation.launch.py
+ros2 launch escape_room fra2mo_navigation.launch.py
 ```
 
 This opens RViz2 with the pre-saved map. You can:
@@ -246,12 +248,12 @@ This opens RViz2 with the pre-saved map. You can:
 
 **Terminal 3** - Execute waypoint navigation:
 ```bash
-ros2 run escape_room_pkg follow_waypoints.py
+ros2 run escape_room follow_waypoints.py
 ```
 
 Or single goal navigation:
 ```bash
-ros2 run escape_room_pkg reach_goal.py
+ros2 run escape_room reach_goal.py
 ```
 
 #### Find Goal Coordinates
@@ -272,17 +274,12 @@ Test camera-based marker recognition.
 
 **Terminal 1** - Launch simulation:
 ```bash
-ros2 launch escape_room_pkg fra2mo_escape_room.launch.py
+ros2 launch escape_room gazebo_fra2mo.launch.py
 ```
 
 **Terminal 2** - Start ArUco detection:
 ```bash
-ros2 launch aruco_ros marker_publisher.launch.py \
-  marker_size:=0.06 \
-  camera_image:=/fra2mo/camera \
-  camera_info:=/fra2mo/camera_info \
-  camera_frame:=camera_optical_link \
-  reference_frame:=base_link
+ros2 launch aruco_ros marker_publisher.launch.py
 ```
 
 **Terminal 3** - View detected markers:
@@ -316,17 +313,17 @@ Test the complete marker-to-PIN pipeline.
 
 **Terminal 1** - Simulation:
 ```bash
-ros2 launch escape_room_pkg fra2mo_escape_room.launch.py
+ros2 launch escape_room gazebo_fra2mo.launch.py
 ```
 
 **Terminal 2** - Spawn armando:
 ```bash
-ros2 launch escape_room_pkg spawn_armando.launch.py
+ros2 launch escape_room spawn_armando.launch.py
 ```
 
 **Terminal 3** - Start keypad controller:
 ```bash
-ros2 run escape_room_pkg keypad_controller.py
+ros2 run escape_room keypad_controller.py
 ```
 
 **Terminal 4** - Start ArUco detection:
@@ -336,7 +333,7 @@ ros2 launch aruco_ros marker_publisher.launch.py
 
 **Terminal 5** - Start bridge node:
 ```bash
-ros2 run escape_room_pkg aruco_to_pin_bridge.py
+ros2 run escape_room aruco_to_pin_bridge.py
 ```
 
 Position fra2mo in front of the door (manually in Gazebo or via navigation). Once the marker is detected for 5 consecutive frames, the PIN is automatically sent to armando.
