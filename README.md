@@ -138,6 +138,7 @@ ros2 launch escape_room fra2mo_escape_room.launch.py
 ```bash
 # Open door
 ros2 run escape_room door_controller.py
+```
 
 **Terminal 3** - Open/close door manually:
 ```bash
