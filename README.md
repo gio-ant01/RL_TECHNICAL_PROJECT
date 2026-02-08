@@ -2,7 +2,6 @@
 
 Multi-robot cooperative system for autonomous navigation and task execution in a simulated corridor environment.
 
-**Demo Video:** [Link al video della simulazione](URL_DEL_TUO_VIDEO)
 
 ---
 
